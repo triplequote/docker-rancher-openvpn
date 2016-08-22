@@ -36,7 +36,10 @@ def auth_ldap(address, basedn, binddn, bindpwd, search, username, password):
     conn.set_option(ldap.OPT_REFERRALS, 0)
         
     # Trying authentication
-    try:    
+    try:
+        if(password is None or password==''):
+            auth_failure('Password is required')
+            
         # if server need authentication to be crawled
         if(binddn is not None and binddn!=''):
             conn.simple_bind_s(binddn, bindpwd)
