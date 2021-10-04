@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:buster
 MAINTAINER Alexis Ducastel <alexis@ducastel.net>
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \

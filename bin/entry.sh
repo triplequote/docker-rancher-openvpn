@@ -83,9 +83,9 @@ persist-key
 persist-tun
 client-to-client
 username-as-common-name
-client-cert-not-required
+verify-client-cert optional
 
-script-security 3 system
+#script-security 3 system
 auth-user-pass-verify /usr/local/bin/openvpn-auth.sh via-env
 
 EOF
