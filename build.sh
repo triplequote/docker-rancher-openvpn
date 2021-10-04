@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_IMAGE="mdns/rancher-openvpn"
+DOCKER_IMAGE="docker.infra.triplequote.com/rancher-openvpn"
 DOCKER_TAG="$1"
 
 if [ "$DOCKER_TAG" = "" ]
